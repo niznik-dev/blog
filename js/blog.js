@@ -1,4 +1,8 @@
 function toggleTag(btn) {
+  if (btn.classList.contains('active') &&
+      document.querySelectorAll('.tag-toggle.active').length <= 1) {
+    return;
+  }
   btn.classList.toggle('active');
   filterPosts();
 }
