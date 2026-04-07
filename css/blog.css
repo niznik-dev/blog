@@ -87,3 +87,36 @@ h2 {
   border-radius: 0.3rem;
   font-size: 85%;
 }
+
+.tag-filters {
+  margin: 1rem 0;
+}
+
+.tag-filter-label {
+  font-size: 80%;
+  color: var(--lightPrOrange);
+  margin-bottom: 0.5rem;
+}
+
+.tag-toggle {
+  display: inline-block;
+  padding: 0.3rem 0.7rem;
+  margin: 0.2rem 0.3rem;
+  border-radius: 0.3rem;
+  font-size: 90%;
+  cursor: pointer;
+  border: 2px solid var(--prOrange);
+  background-color: transparent;
+  color: var(--lightestPrOrange);
+  transition: background-color 0.15s, color 0.15s;
+}
+
+.tag-toggle.active {
+  background-color: var(--prOrange);
+  color: white;
+}
+
+.tag-toggle:hover {
+  background-color: var(--lightPrOrange);
+  color: white;
+}

@@ -8,14 +8,37 @@ title: Posts
     <h1>{{ site.title }}</h1>
     <p>{{ site.description }}</p>
     <hr>
+    <div class="tag-filters">
+      <p class="tag-filter-label">Showing posts matching any selected tag</p>
+      {% for tag in site.data.tags %}
+      <button class="tag-toggle active" data-tag="{{ tag[0] }}" onclick="toggleTag(this)">{{ tag[1] }} {{ tag[0] }}</button>
+      {% endfor %}
+    </div>
+    <hr>
     <ul class="post-list">
       {% for post in site.posts %}
-      <li>
+      <li data-tags="{{ post.tags | join: ',' }}">
         <span class="post-date">{{ post.date | date: "%B %-d, %Y" }}</span>
         {% for tag in post.tags %}{% if site.data.tags[tag] %}<span title="{{ tag }}">{{ site.data.tags[tag] }}</span>{% endif %}{% endfor %}
         <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
       </li>
       {% endfor %}
     </ul>
+    <script>
+    function toggleTag(btn) {
+      btn.classList.toggle('active');
+      var activeTags = [];
+      document.querySelectorAll('.tag-toggle.active').forEach(function(b) {
+        activeTags.push(b.getAttribute('data-tag'));
+      });
+      document.querySelectorAll('.post-list li').forEach(function(li) {
+        var postTags = li.getAttribute('data-tags').split(',');
+        var match = activeTags.length === 0 || postTags.some(function(t) {
+          return activeTags.indexOf(t) !== -1;
+        });
+        li.style.display = match ? '' : 'none';
+      });
+    }
+    </script>
   </div>
 </div>
