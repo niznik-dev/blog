@@ -98,25 +98,25 @@ h2 {
   margin-bottom: 0.5rem;
 }
 
-.tag-toggle {
+button.tag-toggle {
   display: inline-block;
   padding: 0.3rem 0.7rem;
   margin: 0.2rem 0.3rem;
   border-radius: 0.3rem;
   font-size: 90%;
   cursor: pointer;
-  border: 2px solid var(--prOrange);
-  background-color: transparent;
-  color: var(--lightestPrOrange);
+  border: 2px solid var(--prOrange) !important;
+  background-color: transparent !important;
+  color: var(--lightestPrOrange) !important;
   transition: background-color 0.15s, color 0.15s;
 }
 
-.tag-toggle.active {
-  background-color: var(--prOrange);
-  color: white;
+button.tag-toggle.active {
+  background-color: var(--prOrange) !important;
+  color: white !important;
 }
 
-.tag-toggle:hover {
-  background-color: var(--lightPrOrange);
-  color: white;
+button.tag-toggle:hover {
+  background-color: var(--lightPrOrange) !important;
+  color: white !important;
 }
