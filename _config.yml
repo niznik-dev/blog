@@ -1,0 +1,14 @@
+title: Mattie's Low Rank Aberrations
+description: LLMs, HPC, and research software engineering
+baseurl: /blog
+url: https://niznik-dev.github.io
+
+plugins:
+  - jekyll-seo-tag
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
