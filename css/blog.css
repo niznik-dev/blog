@@ -32,12 +32,12 @@ a:hover {
 }
 
 .navbar-brand,
-.nav-item .nav-link {
+.navbar .nav-link {
   color: white;
 }
 
 .navbar-brand:hover,
-.nav-item .nav-link:hover {
+.navbar .nav-link:hover {
   color: var(--darkGray);
 }
 
