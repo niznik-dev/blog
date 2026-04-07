@@ -78,20 +78,22 @@ h2 {
   margin-top: 1rem;
 }
 
-a.post-tag {
+a.post-tag,
+a.post-tag:visited {
   display: inline-block;
-  background-color: var(--prOrange);
+  background-color: var(--lightPrOrange);
   color: white !important;
   padding: 0.2rem 0.6rem;
   margin: 0.2rem 0.3rem;
   border-radius: 0.3rem;
   font-size: 85%;
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 a.post-tag:hover {
-  background-color: var(--lightPrOrange);
+  background-color: var(--prOrange);
   color: white !important;
+  text-decoration: none !important;
 }
 
 .tag-filters {

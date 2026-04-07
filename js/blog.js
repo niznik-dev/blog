@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+(function() {
   var params = new URLSearchParams(window.location.search);
   var tagParam = params.get('tag');
   if (tagParam) {
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     filterPosts();
   }
-});
+})();
 
 function toggleTag(btn) {
   if (btn.classList.contains('active') &&
