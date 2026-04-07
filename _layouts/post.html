@@ -12,7 +12,7 @@ layout: default
     <hr>
     <div class="post-tags">
       {% for tag in page.tags %}
-      <span class="post-tag">{% if site.data.tags[tag] %}{{ site.data.tags[tag] }} {% endif %}{{ tag }}</span>
+      <a class="post-tag" href="{{ '/?tag=' | append: tag | relative_url }}">{% if site.data.tags[tag] %}{{ site.data.tags[tag] }} {% endif %}{{ tag }}</a>
       {% endfor %}
     </div>
     {% endif %}
