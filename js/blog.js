@@ -1,3 +1,16 @@
+// Font selection - using Lora because the irony is too good to pass up
+// Runner-ups if the in-joke gets old: Roboto Mono (techy vibe), Public Sans (clean & readable)
+(function() {
+  var link = document.createElement('link');
+  link.href = 'https://fonts.googleapis.com/css2?family=Lora:wght@400;500;700&display=swap';
+  link.rel = 'stylesheet';
+  document.head.appendChild(link);
+
+  var style = document.createElement('style');
+  style.textContent = 'body { font-family: "Lora", serif; }';
+  document.head.appendChild(style);
+})();
+
 (function() {
   var params = new URLSearchParams(window.location.search);
   var tagParam = params.get('tag');

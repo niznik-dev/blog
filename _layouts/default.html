@@ -21,6 +21,16 @@
     <div class="container">
       {{ content }}
     </div>
+    <footer class="site-footer">
+      <div class="container">
+        <p class="footer-text">
+          &copy; {{ 'now' | date: "%Y" }} {{ site.author | default: site.title }}
+        </p>
+        <p class="footer-built">
+          Built with <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> and <a href="https://claude.ai" target="_blank">Claude</a>
+        </p>
+      </div>
+    </footer>
     <script src="{{ '/js/blog.js' | relative_url }}"></script>
   </body>
 </html>

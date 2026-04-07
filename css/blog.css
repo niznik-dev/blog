@@ -1,34 +1,36 @@
 :root {
-  --lightestPrOrange: #FFAA81;
-  --lightPrOrange: #FF8F5A;
-  --prOrange: #FF671F;
+  --primary: #00B2A9;        /* teal - for links and navbar */
+  --secondary: #6ECEB2;      /* mint - for headings */
+  --accent: #F26522;         /* Gotham/Sirens orange - subtle accents */
+  --text: #A5C4C1;           /* desaturated teal - main text (AAA compliant ~8:1) */
+  --textMuted: #A5ACAF;      /* Eagles Storm Silver - dates/metadata */
   --darkGray: #222222;
 }
 
 body {
   background-color: var(--darkGray);
-  color: var(--prOrange);
+  color: var(--text);
   padding: 75px;
 }
 
 a {
-  color: white;
+  color: var(--primary);
 }
 
 a:hover {
   cursor: pointer;
-  color: var(--prOrange);
+  color: var(--secondary);
 }
 
 .content {
-  color: var(--prOrange);
+  color: var(--text);
   margin-top: 20px;
   text-align: center;
 }
 
 .navbar {
-  background-color: var(--prOrange) !important;
-  border-bottom: 2px solid white;
+  background-color: var(--primary) !important;
+  border-bottom: 2px solid var(--secondary);
 }
 
 .navbar-brand,
@@ -42,16 +44,17 @@ a:hover {
 }
 
 .navbar-toggler {
-  background-color: var(--lightestPrOrange);
+  background-color: var(--secondary);
 }
 
 h1 {
+  color: var(--secondary);
   font-size: 250%;
 }
 
 h2 {
-  color: var(--lightPrOrange);
-  font-size: 150%;
+  color: var(--textMuted);
+  font-size: 125%;
 }
 
 /* Blog-specific */
@@ -64,13 +67,17 @@ h2 {
   margin-bottom: 0.5rem;
 }
 
+.post-list li a {
+  color: var(--secondary);
+}
+
 .post-date {
-  color: var(--lightestPrOrange);
+  color: var(--textMuted);
   font-size: 85%;
 }
 
 .post-content {
-  color: var(--lightestPrOrange);
+  color: var(--text);
   text-align: left;
 }
 
@@ -81,8 +88,9 @@ h2 {
 a.post-tag,
 a.post-tag:visited {
   display: inline-block;
-  background-color: var(--lightPrOrange);
-  color: white !important;
+  background-color: transparent;
+  border: 1px solid var(--accent);
+  color: var(--primary) !important;
   padding: 0.2rem 0.6rem;
   margin: 0.2rem 0.3rem;
   border-radius: 0.3rem;
@@ -91,7 +99,7 @@ a.post-tag:visited {
 }
 
 a.post-tag:hover {
-  background-color: var(--prOrange);
+  background-color: var(--secondary);
   color: white !important;
   text-decoration: none !important;
 }
@@ -102,7 +110,7 @@ a.post-tag:hover {
 
 .tag-filter-label {
   font-size: 80%;
-  color: var(--lightPrOrange);
+  color: var(--textMuted);
   margin-bottom: 0.5rem;
 }
 
@@ -113,18 +121,47 @@ button.tag-toggle {
   border-radius: 0.3rem;
   font-size: 90%;
   cursor: pointer;
-  border: 2px solid var(--prOrange) !important;
+  border: 2px solid var(--accent) !important;
   background-color: transparent !important;
-  color: var(--lightestPrOrange) !important;
+  color: var(--text) !important;
   transition: background-color 0.15s, color 0.15s;
 }
 
 button.tag-toggle.active {
-  background-color: var(--prOrange) !important;
+  background-color: var(--primary) !important;
   color: white !important;
 }
 
 button.tag-toggle:hover {
-  background-color: var(--lightPrOrange) !important;
+  background-color: var(--secondary) !important;
   color: white !important;
+}
+
+/* Footer */
+.site-footer {
+  margin-top: 1rem;
+  padding: 1rem 0;
+  border-top: 1px solid var(--textMuted);
+  text-align: center;
+}
+
+.footer-text {
+  color: var(--text);
+  margin-bottom: 0;
+  font-size: 90%;
+}
+
+.footer-built {
+  color: var(--textMuted);
+  margin: 0;
+  font-size: 85%;
+}
+
+.footer-built a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.footer-built a:hover {
+  color: var(--secondary);
 }
