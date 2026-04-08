@@ -8,6 +8,17 @@ layout: default
     <p class="post-date">{{ page.date | date: "%B %-d, %Y" }}</p>
     <hr>
     {{ content }}
+    {% if page.updates.size > 0 %}
+    <hr>
+    <div class="post-updates">
+      <p class="post-updates-heading">Updates</p>
+      <ul>
+        {% for update in page.updates %}
+        <li><strong>{{ update.date }}</strong> — {{ update.note }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
     {% if page.tags.size > 0 %}
     <hr>
     <div class="post-tags">

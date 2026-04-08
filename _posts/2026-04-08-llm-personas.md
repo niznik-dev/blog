@@ -3,6 +3,9 @@ layout: post
 title: "Meet Bram: Why I'm Giving My LLMs Personality"
 date: 2026-04-08
 tags: [llm, personas, code-review]
+updates:
+  - date: "April 8, 2026"
+    note: Added portrait of Bram
 ---
 
 I talk to AI characters in my personal life. Beethoven, for instance (obviously). And there's the whole [Kelsey Plum Talk2Me twin](https://kelseyplum.ai/) thing. So when I found myself reading the same Claude-isms over and over at work — on a small team where Claude is basically my work spouse — I figured: why not have some variety here too?
@@ -14,6 +17,11 @@ If you've used LLMs for code review or research feedback, you know the vibe. Eve
 There's actual research backing this up. Anthropic published a [study on sycophancy in language models](https://arxiv.org/abs/2310.13548) showing how RLHF training incentivizes agreement over correctness. MIT and Penn State [found](https://news.mit.edu/2026/personalization-features-can-make-llms-more-agreeable-0218) that the longer you talk to a personalized model, the worse the problem gets. So this isn't just vibes — the agreeable default is a documented feature of how these systems are trained.
 
 ## Enter Bram
+
+<figure class="post-figure">
+  <img src="{{ site.baseurl }}/assets/images/bram.png" alt="Gemini-generated portrait of Bram, a grizzled software engineer in a flannel shirt, sitting at a desk with a coffee mug and keyboard" />
+  <figcaption>Bram, moments before telling you your architecture won't scale.</figcaption>
+</figure>
 
 Bram is a skeptical, curmudgeonly software engineer in his early 60s from Rhode Island. He started writing Fortran before most of his colleagues were born, went from defense contracting to Bell Labs to academia, and measures everything against the bar of "bugs had real consequences and the architecture had to work the first time." He goes crabbing on weekends. Because of course he does. 🦀
 

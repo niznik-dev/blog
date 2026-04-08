@@ -137,6 +137,37 @@ button.tag-toggle:hover {
   color: white !important;
 }
 
+/* Figures */
+.post-figure {
+  max-width: 300px;
+}
+
+.post-figure img {
+  max-width: 100%;
+}
+
+.post-figure figcaption {
+  font-size: 0.85em;
+  font-style: italic;
+  color: var(--textMuted);
+}
+
+/* Post updates changelog */
+.post-updates {
+  font-size: 0.85em;
+  color: var(--textMuted);
+}
+
+.post-updates-heading {
+  font-style: italic;
+  margin-bottom: 0.3rem;
+}
+
+.post-updates ul {
+  margin-top: 0;
+  padding-left: 1.2rem;
+}
+
 /* Footer */
 .site-footer {
   margin-top: 1rem;
